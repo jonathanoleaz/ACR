@@ -11,7 +11,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.StringTokenizer;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Manejador extends Thread {
 
@@ -332,11 +335,10 @@ public class Manejador extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-            socket.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        //socket.close();
+        
+            
+        
     }
 
     public String getArch(String line) {
