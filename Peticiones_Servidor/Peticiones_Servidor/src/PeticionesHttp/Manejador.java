@@ -335,7 +335,11 @@ public class Manejador extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //socket.close();
+        try {
+            socket.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Manejador.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
             
         
