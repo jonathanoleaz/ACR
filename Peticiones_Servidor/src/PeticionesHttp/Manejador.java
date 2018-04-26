@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Manejador extends Thread {
+public class Manejador implements Runnable{
 
     public Socket socket;
     public PrintWriter pw;
